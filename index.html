@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igreja Comunidade - I.P.M.V</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="app-title">Igreja Evangélica Comunidade</h1>
+        <p class="subtitle">I.P.M.V - Sua comunidade online</p>
+    </header>
+
+    <div class="container">
+        <!-- Aba Início -->
+        <div id="inicio" class="tab-content active">
+            <div class="card">
+                <h2>✨ Versículo do Dia</h2>
+                <p><em>"Lâmpada para os meus pés é tua palavra, e luz para o meu caminho."</em></p>
+                <p class="verse-reference">- Salmo 119:105</p>
+            </div>
+            <div class="card">
+                <h2>🙏 Palavra do Pastor</h2>
+                <p>Sejam muito bem-vindos ao nosso aplicativo oficial. Aqui você fica por dentro de tudo o que acontece na nossa comunidade!</p>
+                <a href="https://www.youtube.com" target="_blank" class="btn">Assista ao Vivo no YouTube</a>
+            </div>
+            <div class="card">
+                <h2>📱 Bem-vindo!</h2>
+                <p>Navegue pelos abas abaixo para acessar agenda, pedidos de oração e informações sobre contribuições.</p>
+            </div>
+        </div>
+
+        <!-- Aba Agenda -->
+        <div id="agenda" class="tab-content">
+            <div class="card">
+                <h2>📅 Nossos Cultos</h2>
+                <div class="schedule-item">
+                    <span class="day">Domingo</span>
+                    <span class="time">Culto de Celebração às 19h00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Quarta-feira</span>
+                    <span class="time">Culto de Oração às 19h30</span>
+                </div>
+            </div>
+            <div class="card">
+                <h2>🎉 Próximos Eventos</h2>
+                <div class="event-item">
+                    <p><strong>Confraternização de Casais</strong></p>
+                    <p>Sábado que vem às 20h</p>
+                </div>
+                <div class="event-item">
+                    <p><strong>Grupo de Jovens</strong></p>
+                    <p>Sexta-feira às 19h30</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aba Oração -->
+        <div id="oracao" class="tab-content">
+            <div class="card">
+                <h2>🙏 Pedidos de Oração</h2>
+                <p>Deixe seu pedido abaixo. Nossa equipe pastoral estará orando por você.</p>
+                <form id="prayerForm">
+                    <div class="form-group">
+                        <label for="name">Nome (Opcional):</label>
+                        <input type="text" id="name" placeholder="Seu nome">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="request">Seu Pedido:</label>
+                        <textarea id="request" rows="4" placeholder="Descreva seu pedido de oração..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer;">Enviar Pedido</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Aba Contribuir -->
+        <div id="contribuir" class="tab-content">
+            <div class="card">
+                <h2>💝 Dízimos e Ofertas</h2>
+                <p>Seja um facilitador da obra de Deus. Você pode contribuir de forma segura através do nosso PIX.</p>
+                
+                <div class="pix-container">
+                    <h3>Chave PIX</h3>
+                    <div class="pix-key">
+                        pix@igrejacomunidade.com.br
+                    </div>
+                    <button class="btn-copy" onclick="copyPix()">📋 Copiar Chave</button>
+                </div>
+                
+                <p style="font-size: 0.9rem; color: #7f8c8d; text-align: center; margin-top: 15px;">
+                    <strong>Igreja Evangélica Comunidade</strong><br>
+                    Banco S/A
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav>
+        <button class="nav-btn active-tab" onclick="switchTab('inicio', this)">
+            <span class="nav-icon">🏠</span>
+            <span>Início</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('agenda', this)">
+            <span class="nav-icon">📅</span>
+            <span>Agenda</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('oracao', this)">
+            <span class="nav-icon">🙏</span>
+            <span>Oração</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('contribuir', this)">
+            <span class="nav-icon">💝</span>
+            <span>Dízimos</span>
+        </button>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #d35400;
+    --accent-light: #e67e22;
+    --bg-color: #f4f6f7;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --border-color: #ecf0f1;
+    --success-color: #27ae60;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 84, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-copy {
+    display: inline-block;
+    background: var(--success-color);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-copy:hover {
+    background: #229954;
+}
+
+.verse-reference {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin: 10px 0 0 0;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Agenda */
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-item .day {
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 100px;
+}
+
+.schedule-item .time {
+    color: var(--text-light);
+    text-align: right;
+}
+
+.event-item {
+    padding: 12px;
+    background: #f9f9f9;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    margin: 5px 0;
+}
+
+.event-item p:first-child {
+    color: var(--primary-color);
+}
+
+.event-item p:last-child {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* PIX */
+.pix-container {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #b0d4ff;
+    margin: 15px 0;
+}
+
+.pix-container h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.pix-key {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    word-break: break-all;
+    border: 2px solid var(--accent-color);
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+/* Menu de Navegação Inferior (Estilo App) */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    padding: 12px 10px;
+    flex-grow: 1;
+    color: var(--text-light);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+}
+
+.nav-btn.active-tab {
+    color: var(--accent-color);
+    border-top: 3px solid var(--accent-color);
+}
+
+.nav-btn:active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* Efeito toast (notificação) */
+.toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--success-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
